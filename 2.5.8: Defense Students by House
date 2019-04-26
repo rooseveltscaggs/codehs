@@ -1,0 +1,7 @@
+SELECT Person.last_name, Person.first_name, House.name AS "house"
+FROM Course JOIN Enrollment JOIN Person JOIN House
+WHERE Person.id = Enrollment.person
+AND Course.id = Enrollment.course 
+AND Course.name = "Defense Against the Dark Arts" 
+AND House.id = Person.house
+ORDER BY House.name, last_name, first_name;
