@@ -1,0 +1,4 @@
+SELECT Course.name
+FROM Enrollment JOIN Course
+WHERE Enrollment.person = 15 AND Enrollment.course = Course.id
+ORDER BY Course.name;
