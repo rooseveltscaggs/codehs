@@ -1,0 +1,5 @@
+SELECT Course.name as "Course", COUNT(*) as "Enrollment"
+FROM Course JOIN Enrollment
+WHERE Course.id = Enrollment.course
+GROUP BY Enrollment.course
+ORDER BY Enrollment DESC, Course.name;
