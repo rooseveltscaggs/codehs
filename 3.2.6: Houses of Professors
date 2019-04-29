@@ -1,0 +1,4 @@
+SELECT name as "House", COUNT(*) as "Professors"
+FROM House JOIN Person
+WHERE House.id = Person.house AND Person.id IN (94, 19, 67, 11, 16)
+GROUP BY Person.house;
