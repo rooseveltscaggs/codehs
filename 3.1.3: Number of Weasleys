@@ -1,0 +1,3 @@
+SELECT COUNT(*) As "Num Weasleys"
+FROM Person
+WHERE last_name = "Weasley"
