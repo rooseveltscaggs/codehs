@@ -1,0 +1,3 @@
+SELECT COUNT(*) As "Num Students"
+FROM Enrollment
+WHERE course = 2;
