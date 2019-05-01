@@ -1,0 +1,6 @@
+SELECT first_name, last_name
+FROM Course JOIN Enrollment JOIN Person
+WHERE Course.id = Enrollment.course AND Person.id = Course.professor
+GROUP BY Enrollment.course
+ORDER BY COUNT(*)
+LIMIT 1;
