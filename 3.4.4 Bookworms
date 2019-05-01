@@ -1,0 +1,6 @@
+SELECT first_name, last_name, COUNT(*) As "courses"
+FROM Person JOIN Enrollment
+WHERE Person.id = Enrollment.person
+GROUP BY Person.id
+ORDER BY courses DESC, last_name
+LIMIT 5;
