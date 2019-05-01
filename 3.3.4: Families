@@ -1,4 +1,4 @@
-SELECT Person.last_name As "Family", COUNT(*) as "Count"
+SELECT Person.last_name As "Family", COUNT(*) As "Count"
 FROM Person
 GROUP BY Person.last_name
 HAVING COUNT(*) > 1
