@@ -1,6 +1,6 @@
-SELECT Course.name as "Course", Person.last_name As "Professor Last Name", COUNT(*) as "Enrollment"
-FROM Course JOIN Enrollment JOIN Person
-WHERE Course.id = Enrollment.course AND Course.professor = Person.id
+SELECT Course.name as "Course"
+FROM Course JOIN Enrollment
+WHERE Course.id = Enrollment.course AND Course.name LIKE "C%"
 GROUP BY Enrollment.course
-HAVING COUNT(*) > 18
+HAVING COUNT(*) >= 15
 ORDER BY Enrollment DESC, Course.name;
