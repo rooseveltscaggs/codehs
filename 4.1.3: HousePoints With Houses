@@ -1,0 +1,8 @@
+-- This displays the HousePoint table with the
+-- first and last names of the giver and receiver
+-- replacing their ids
+SELECT Giver.first_name, Giver.last_name,
+Receiver.first_name, Receiver.last_name, points, House.name As "House"
+FROM HousePoint JOIN Person as Giver JOIN Person AS Receiver JOIN House
+WHERE HousePoint.giver = Giver.id AND House.id = Receiver.house
+AND HousePoint.receiver = Receiver.id;
