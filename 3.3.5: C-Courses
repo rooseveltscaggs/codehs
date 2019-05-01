@@ -1,3 +1,6 @@
-SELECT Person.id, Person.first_name, COUNT(*)
-FROM Person JOIN Enrollment
-WHERE first_name LIKE "C%" AND Person.id = Enrollment.person
+SELECT Course.name as "Course"
+FROM Course JOIN Enrollment
+WHERE Course.id = Enrollment.course AND Course.name LIKE "C%"
+GROUP BY Enrollment.course
+HAVING COUNT(*) >= 15
+ORDER BY Course.name;
