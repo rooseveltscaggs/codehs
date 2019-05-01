@@ -2,5 +2,5 @@ SELECT Course.name as "Course"
 FROM Course JOIN Enrollment
 WHERE Course.id = Enrollment.course AND Course.name LIKE "C%"
 GROUP BY Enrollment.course
-HAVING COUNT(*) > 14
+HAVING COUNT(*) >= 15
 ORDER BY Course.name;
