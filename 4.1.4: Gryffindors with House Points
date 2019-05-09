@@ -1,0 +1,5 @@
+SELECT Receiver.first_name, Receiver.last_name, points
+FROM HousePoint JOIN Person as Giver JOIN Person AS Receiver JOIN House
+WHERE HousePoint.giver = Giver.id AND House.id = Receiver.house AND House.id = 1
+AND HousePoint.receiver = Receiver.id
+ORDER BY points DESC, Receiver.last_name, Receiver.first_name;
