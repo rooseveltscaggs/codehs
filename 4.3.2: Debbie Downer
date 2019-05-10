@@ -1,0 +1,5 @@
+SELECT Person.first_name, Person.last_name, SUM(points) AS "Points"
+FROM Housepoint join Person 
+WHERE Housepoint.giver = Person.id  AND HousePoint.points < 0
+GROUP BY Housepoint.giver
+ORDER BY points;
