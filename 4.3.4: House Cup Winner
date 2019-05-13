@@ -1,0 +1,9 @@
+select h.name as "House"
+from person p
+join housepoint hp
+on hp.receiver = p.id
+join house h
+On h.id = p.house
+group by p.house, hp.points
+order by hp.points desc
+limit 1;
