@@ -1,0 +1,6 @@
+SELECT p.first_name as "Name", sum(hp.points) as "Points"
+from Person p join HousePoint hp
+on hp.receiver = p.id
+Where p.last_name LIKE "Weasley%"
+Group by p.first_name
+Order by hp.points desc;
